@@ -8,6 +8,7 @@ const BaseClient = require('./BaseClient')
 */
 
 class Client extends BaseClient {
+  this.ready = readyEvent
   /**
   * @param {token} [token]
   */
