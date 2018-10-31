@@ -1,13 +1,15 @@
 const events = require('events')
 const ws = require('ws')
 const events = require('events')
-bot.ready = new events.EventEmitter()
+const readyevent = new events.EventEmitter()
 
 class WebSocket extends events {
-  gateConnect(token, ready) {
+  gateConnect(token, ready, message) {
     const socket = new ws(`wss://gateway.discord.gg/?v=6&encoding=json`)
     socket.onopen = () => {
-      console.log("Logged in.")
+      console.log("Connected to Discord.")
     }
   }
 } 
+
+module.exports.Socket = WebSocket
