@@ -33,6 +33,11 @@ class WebSocket extends events {
       if (data.op == ops.incorrect) {
         throw new RangeError("Incorrect Token.")
       }
+      
+      if (data.op == ops.ready) {
+        ready.emit("ready")
+      }
+      
     }
   }
 } 
