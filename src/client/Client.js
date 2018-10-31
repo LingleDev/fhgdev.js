@@ -12,7 +12,7 @@ class Client extends BaseClient {
   * @param {token} [token]
   */
   login(token) {
-    Socket.login(token)
+    Socket.gateConnect(token)
   }
 }
 
