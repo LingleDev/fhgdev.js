@@ -15,12 +15,6 @@ socket.onopen = () => {
   console.log("Connected to Discord.")
 }
 
-socket.onmessage = (a) => {
-  const b = JSON.parse(a.data)
-  if (0 == b.op) return;
-  data = b
-}
-
 class WebSocket extends events {
   gateConnect(token) {
       ws.send(JSON.stringify({
@@ -32,9 +26,12 @@ class WebSocket extends events {
         large_threshold: 50
       }))
   }
-  
-  if (data.op == ops.incorrect) {
-    throw new RangeError("Incorrect Token.")
+  socket.onmessage = (a) => {
+  const b = JSON.parse(a.data)
+  if (0 == b.op) return;
+  if (b.op == ops.incorrect) {
+      throw new RangeError("Incorrect Token.")
+    }
   }
 }
   
