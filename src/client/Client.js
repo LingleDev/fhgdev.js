@@ -11,7 +11,7 @@ class Client {
   * @param {token} [token]
   */
   login(token) {
-    socket.gateConnect(token)
+    discord.gateConnect(token)
   }
 }
 
