@@ -1,8 +1,8 @@
 {
-  name: "fhg.js",
-  version: 1.0.0,
-  dependencies: {
+  "name": "fhgdev.js",
+  "version": "1.0.0",
+  "dependencies": {
     "ws": "latest",
-    "node-fetch": "latest"
+    "snekfetch": "latest"
   }
 }
