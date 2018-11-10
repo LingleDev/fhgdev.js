@@ -4,9 +4,9 @@ const readyEvent = new (require('events').EventEmitter)()
 
 class Client {
   constructor(ready) {
-    super()
+    this.ready = readyEvent
   }
-  this.ready = readyEvent
+  
   /**
   * @param {token} [token]
   */
