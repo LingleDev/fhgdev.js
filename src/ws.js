@@ -4,6 +4,10 @@ const ws = require('ws')
 const codes = require('./Misc/Constants').OPCodes
 const socket = new ws(`wss://gateway.discord.gg/?v=6&encoding=json`)
 var data;
+socket.onopen = () => {
+  console.log("OPEN")
+}
+
 socket.onmessage = (a) => {
   const b = JSON.parse(a)
   if (0 == b.op) {
