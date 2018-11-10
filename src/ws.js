@@ -24,7 +24,6 @@ class WebSocket {
           status: "online"
         }
       }))
-    }
   }
 }
 
