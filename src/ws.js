@@ -13,7 +13,7 @@ socket.onmessage = (a) => {
 }
 
 class WebSocket {
-    gateConnect = (token) => {
+    gateConnect(token) {
       socket.send(JSON.stringify({
         op: 2,
         d: {
