@@ -17,7 +17,7 @@ socket.onopen = () => {
 
 socket.onmessage = (a) => {
   const b = JSON.parse(a.data)
-  if (0 == data.op) return;
+  if (0 == b.op) return;
   data = b
 }
 
