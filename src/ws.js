@@ -28,3 +28,5 @@ class WebSocket {
     }
   }
 }
+
+module.exports.socket = WebSocket
