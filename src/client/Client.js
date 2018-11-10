@@ -1,4 +1,4 @@
-const socket = require('../ws.js').Socket
+const socket = require('../ws.js').socket
 const discord = new socket()
 const readyEvent = new (require('events').EventEmitter)()
 
