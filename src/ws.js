@@ -13,18 +13,18 @@ socket.onmessage = (a) => {
 }
 
 class WebSocket {
-  gateConnect(tok) {
-    const d = data
-    socket.send(JSON.stringify({
-      op: 2,
-      token: tok,
-      properties: {
-        $browser: "github"
-      },
-      status: "online"
-    }))
-    if (codes.incorrect == d.op) {
-      throw new RangeError("Incorrect Token.");
+  constructor(gateConnect) {
+    this.gateConnect = (token) => {
+      socket.send(JSON.stringify({
+        op: 2,
+        d: {
+          token: token,
+          properties: {
+            $browser: 'Github   '
+          },
+          status: "online"
+        }
+      }))
     }
   }
 }
