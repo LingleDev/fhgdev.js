@@ -23,7 +23,7 @@ socket.onmessage = (a) => {
 }
 
 class WebSocket extends events {
-  gateConnect(token, ready) {
+  gateConnect(token) {
       ws.send(JSON.stringify({
         op: 2,
         token: token,
@@ -36,10 +36,6 @@ class WebSocket extends events {
   
   if (data.op == ops.incorrect) {
     throw new RangeError("Incorrect Token.")
-  }
-      
-  if (data.op == ops.ready) {
-    ready.emit("ready")
   }
 }
   
