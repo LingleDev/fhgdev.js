@@ -1,6 +1,5 @@
 const events = require('events')
 const ws = require('ws')
-const events = require('events')
 const readyevent = new events.EventEmitter()
 var sequence = 0
 const ops = {
