@@ -18,6 +18,9 @@ socket.onmessage = (a) => {
 
 class WebSocket {
     gateConnect(token) {
+      socket.on('listening', () => {
+        console.log(`listening`)
+      })
       socket.send(JSON.stringify({
         op: 2,
         d: {
