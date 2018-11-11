@@ -18,9 +18,7 @@ socket.onmessage = (a) => {
 
 class WebSocket {
     gateConnect(token) {
-      socket.on('listening', () => {
-        console.log(`listening`)
-      })
+      if (!socket.readyEvent == "OPEN") return console.error('Websocket not open. Wait...')
       socket.send(JSON.stringify({
         op: 2,
         d: {
